@@ -21,7 +21,7 @@ namespace gridConverter
 	{
 		public void Convert(float x, float y)
 		{
-
+			//set up iterable key value list
 			var myGridCoord = new List<KeyValuePair<string, int>>()
 			{
 				new KeyValuePair<string, int>("A", 100),
@@ -36,6 +36,7 @@ namespace gridConverter
 				new KeyValuePair<string, int>("J", 1000),
 			};
 
+			// statement ensures coordinates are within 1000 by 1000
 			if (x >= 1000 || y >= 1000)
 			{
 				Console.WriteLine("Invalid coordinates!");
@@ -43,9 +44,12 @@ namespace gridConverter
 			}
 			else
 			{
+				//declare and initialise variables for coordinate conversion
 				string xCoord = "";
 				float yCoord = 0;
 				//loop for x coord
+				
+				//iterate through coordinate x to match suitable letter from myGridCoord List
 				foreach (KeyValuePair<string, int> val in myGridCoord)
 				{
 					if (x <= val.Value)
@@ -55,7 +59,7 @@ namespace gridConverter
 					}
 
 				}
-				//loop for y-coord
+				//loop for y-coord to match suitable key value pair from myGridCoord list and find the index value
 				foreach (KeyValuePair<string, int> val in myGridCoord)
 				{
 					if (y <= val.Value)
@@ -67,6 +71,7 @@ namespace gridConverter
 				}
 				string convertedCoord = xCoord + yCoord.ToString();
 
+				//print results out as string for converted coordinates
 				Console.WriteLine(convertedCoord);
 			}
 
