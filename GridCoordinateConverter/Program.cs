@@ -1,9 +1,4 @@
-﻿// An entity in a game is located at coordinates (x,y) in a world measuring 1000m by 1000m. (0<=x<1000, 0<=y<1000)
-// This world is divided into a 10 by 10 grid, and the grid squares are indexed from zero. Also, the x grid coordinate is converted to a letter(A, B, C).
-// Implement a function Convert (x,y) that returns a string of the x grid-coordinate expressed as a letter, and the y co-ordinate as a numver between 1 and 10.
-// We expect that x=0, y=0 would be "A1" and x=999, y=999 would be "J10"
-
-using System;
+﻿using System;
 using System.IO;
 using System.Collections.Generic;
 
